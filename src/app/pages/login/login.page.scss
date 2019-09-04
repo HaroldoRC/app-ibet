@@ -1,0 +1,187 @@
+div.login-form{
+    min-height: 100%;
+    min-width: 100%;
+    background-color: #F5F4F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div.wrapper{
+        height: 100%;
+        width: 100%;
+        padding: 0 10px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    div.logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 35px;
+        img{
+            padding-top: 35px;
+        }
+    }
+    div.input{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        label{
+            font-family: Montserrat !important;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #323537;
+            margin-bottom: 5px;
+        }
+        input{
+            font-family: Montserrat !important;
+            background-color: #DEE3E5;
+            border-radius: 3px;
+            border-width: 0px;
+            padding: 6px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #616768;
+        }
+        span{
+            font-family: Montserrat !important;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1rem;
+            text-align: right;
+            color: #555A5E;
+        }
+    }
+    div.input.password{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 35px;
+        label{
+            font-family: Montserrat !important;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #323537;
+            margin-bottom: 5px;
+        }
+        input{
+            font-family: Montserrat !important;
+            background-color: #DEE3E5;
+            border-radius: 3px;
+            border-width: 0px;
+            padding: 6px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #616768;
+            margin-bottom: 5px;
+        }
+        span{
+            font-family: Montserrat !important;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.9rem;
+            text-align: right;
+            color: #555A5E;
+            cursor: pointer;
+        }
+    }
+    div.middle-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 35px;
+        div{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          span{
+              font-family: Montserrat !important;
+              font-weight: bold;
+              font-size: 1rem;
+              color: #323537;
+          }
+          .toggle{
+              margin-left: 20px;
+              .toggleBack{
+                  width: 20px;
+                  height: 10px;
+                  border-radius: 5px;
+                  background-color: #BCBBBC;
+                  position: relative;
+                  transition: all 250ms ease;
+                  .toggleCircle{
+                      background-color: #616768;
+                      width: 16px;
+                      height: 16px;
+                      border-radius: 8px;
+                      position: absolute;
+                      top: 50%;
+                      transition: all 250ms ease;
+                      left: 20%;
+                      transform: translate(-50%, -50%);
+                  }
+                  &.active{
+                      background-color: #3493D1;
+                      .toggleCircle{
+                        background-color: #3C68BF;
+                        left: 80%;
+                      }
+                  }
+              }
+          }
+        }
+    }
+    div.loginButton{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+        margin-bottom: 15px;
+        button{
+            background-image: linear-gradient(17.32deg, #3F51B5 17.51%, #3493D1 82.49%);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            width: 100%;
+            height: 42px;
+            cursor: pointer;
+            span{
+                font-family: Montserrat !important;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                text-align: center;
+                color: #E6E6E6;
+
+            }
+        }
+    }
+    div.bottom-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        span.padrao{
+            font-family: Montserrat !important;
+            font-size: 0.9rem;
+            font-style: normal;
+            font-weight: normal;
+            color: #555A5E;
+            cursor: pointer;
+        }
+        span.continuarCom{
+            font-family: Montserrat !important;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 10px;
+            color: #323537;
+        }
+    }
+    div.logosDeLogin{
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        img{
+            width: 40px;
+        }
+    }
+}

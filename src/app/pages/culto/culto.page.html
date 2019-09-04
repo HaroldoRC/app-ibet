@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <img class="headerLogoBranco" src="./assets/logoBranco.svg" />
+      </ion-buttons>
+      <span class="headerTittleSpan">IBET</span>
+      <ion-buttons slot="end" (click)="doLogout()">
+        <i class="fas fa-sign-out-alt logoutButton" color="light"></i>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar  color="primary">
+        <ion-searchbar [(ngModel)]="queryText" (ionChange)="getItems()" color="light" placeholder="Pesquisar"></ion-searchbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- <div class="content">
+    <div class="wrapper"> -->
+      <ion-content color="light">
+          <ion-list #scheduleList [hidden]="shownSessions === 0">
+              <ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
+                <ion-item-divider color="light" sticky>
+                  <ion-label class="tituloMes">
+                    {{group.mes}}
+                  </ion-label>
+                </ion-item-divider>
+
+                <ion-item-sliding *ngFor="let session of group.sessions" [hidden]="session.hide">
+                  <ion-item color="light" (click)="presentCultoDetalhes(session)">
+                    <div class="data">
+                        <span class="diaDoMes">{{ session.diaDoMes }}</span>
+                        <span class="diaDaSemana">{{ session.diaDaSemana }}</span>
+                    </div>
+                    <div class="infoCulto">
+                        <span class="tema">{{session.tema}}</span>
+                        <span class="preletor">{{session.preletor}}</span>
+                    </div>
+                  </ion-item>
+                </ion-item-sliding>
+              </ion-item-group>
+            </ion-list>
+
+            <ion-list-header [hidden]="shownSessions > 0">
+              No Sessions Found
+            </ion-list-header>
+
+      </ion-content>
+    <!-- </div>
+  </div> -->

@@ -1,0 +1,145 @@
+.headerLogoBranco {
+  margin-left: 5px;
+  width: 1.7rem;
+}
+.headerTittleSpan {
+  position: absolute;
+  left: 50%;
+  font-size: 1.5rem;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: Montserrat !important;
+}
+.logoutButton {
+  font-size: 1.7em;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  background-color: #f1f3f4;
+  .wrapper {
+    margin: 0 10px;
+  }
+}
+
+ion-label.tituloMes {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #555a5e;
+  font-family: Montserrat !important;
+}
+
+div.data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span.diaDoMes{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1rem;
+        text-align: center;
+        color: #555A5E;
+    }
+    span.diaDaSemana{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        text-align: center;
+        color: #555A5E;
+    }
+}
+div.infoCulto{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    span.tema{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: #555A5E;
+    }
+    span.preletor{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.9rem;
+        color: #555A5E;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  label {
+    font-family: Montserrat !important;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #323537;
+    margin-bottom: 5px;
+  }
+  input {
+    font-family: Montserrat !important;
+    background-color: #f1f3f4;
+    border-radius: 3px;
+    border-width: 0px;
+    padding: 6px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #616768;
+  }
+  span {
+    font-family: Montserrat !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: right;
+    color: #555a5e;
+  }
+}
+
+$categories: (
+  ionic: var(--ion-color-primary),
+  angular: #ac282b,
+  communication: #8e8d93,
+  tooling: #fe4c52,
+  services: #fd8b2d,
+  design: #fed035,
+  workshop: #69bb7b,
+  food: #3bc7c4,
+  documentation: #b16be3,
+  navigation: #6600cc
+);
+
+@each $track, $value in map-remove($categories) {
+  ion-item-sliding[track="#{$track}"] ion-label {
+    border-left: 2px solid $value;
+    padding-left: 10px;
+  }
+}

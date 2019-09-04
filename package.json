@@ -1,0 +1,121 @@
+{
+  "name": "ionic-ibet-app",
+  "version": "0.0.0",
+  "description": "IBET App",
+  "author": "Harolco Costa <haroldo.costa.dev@gmail.com>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test --watch=false",
+    "lint": "ng lint",
+    "hmr": "ng serve --configuration hmr",
+    "android": "ionic cordova run android -l --consolelogs",
+    "android-build": "ionic cordova build android --release --prod -- --gradleArg=-PcdvMinSdkVersion=26",
+    "android-assign": "jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore saurus_ophd0202.jks platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk \"saurus tecnologia em software ltda me\"",
+    "android-zipalign": "zipalign -v 4 platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk platforms/android/app/build/outputs/apk/release/SaurusFidelidade.apk",
+    "android-zipalign-rm": "rm platforms/android/app/build/outputs/apk/release/SaurusFidelidade.apk && zipalign -v 4 platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk platforms/android/app/build/outputs/apk/release/SaurusFidelidade.apk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/ibet/app-ibet.git"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "8.1.1",
+    "@angular/core": "8.1.1",
+    "@angular/fire": "^5.2.1",
+    "@angular/forms": "8.1.1",
+    "@angular/platform-browser": "8.1.1",
+    "@angular/platform-browser-dynamic": "8.1.1",
+    "@angular/pwa": "~0.801.1",
+    "@angular/router": "8.1.1",
+    "@angular/service-worker": "~8.1.1",
+    "@fortawesome/angular-fontawesome": "^0.4.0",
+    "@fortawesome/fontawesome-pro": "^5.10.1",
+    "@ionic-native/core": "5.0.0-beta.15",
+    "@ionic-native/google-plus": "^5.13.0",
+    "@ionic-native/in-app-browser": "5.0.0-beta.15",
+    "@ionic-native/splash-screen": "5.0.0-beta.15",
+    "@ionic-native/status-bar": "5.0.0-beta.15",
+    "@ionic/angular": "^4.7.0",
+    "@ionic/storage": "^2.1.3",
+    "cordova-android": "8.0.0",
+    "cordova-ios": "^5.0.1",
+    "cordova-plugin-customurlscheme": "4.4.0",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-googleplus": "^8.0.0",
+    "cordova-plugin-ionic-keyboard": "^2.1.2",
+    "cordova-plugin-ionic-webview": "^4.0.1",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.2",
+    "cordova-universal-links-plugin-fix": "1.2.1",
+    "core-js": "^2.5.7",
+    "crypto-js": "^3.1.9-1",
+    "firebase": "^6.5.0",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "rxjs": "6.5.2",
+    "sw-toolbox": "3.6.0",
+    "tslib": "^1.9.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/architect": "^0.801.1",
+    "@angular-devkit/build-angular": "^0.801.2",
+    "@angular-devkit/core": "^8.1.1",
+    "@angular-devkit/schematics": "^8.1.1",
+    "@angular/cli": "^8.1.1",
+    "@angular/compiler": "8.1.1",
+    "@angular/compiler-cli": "8.1.1",
+    "@angular/language-service": "~8.1.1",
+    "@angularclass/hmr": "^2.1.3",
+    "@ionic/angular-toolkit": "^2.0.0",
+    "@ionic/lab": "^2.0.2",
+    "@types/jasmine": "3.3.15",
+    "@types/jasminewd2": "2.0.6",
+    "@types/node": "^12.0.8",
+    "codelyzer": "^5.0.1",
+    "jasmine-core": "3.4.0",
+    "jasmine-spec-reporter": "4.2.1",
+    "karma": "4.1.0",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-coverage-istanbul-reporter": "2.0.5",
+    "karma-jasmine": "2.0.1",
+    "karma-jasmine-html-reporter": "1.4.2",
+    "protractor": "5.4.2",
+    "puppeteer": "1.17.0",
+    "ts-node": "8.2.0",
+    "tslint": "^5.17.0",
+    "typescript": "~3.4.5"
+  },
+  "cordova": {
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-universal-links-plugin": {},
+      "cordova-plugin-customurlscheme": {
+        "URL_SCHEME": "com.firebase.cordova",
+        "ANDROID_SCHEME": " ",
+        "ANDROID_HOST": " ",
+        "ANDROID_PATHPREFIX": "/"
+      },
+      "cordova-plugin-googleplus": {
+        "REVERSED_CLIENT_ID": "321414137278-big7kklhj5reh50onucunjmbta8sqe7p.apps.googleusercontent.com",
+        "PLAY_SERVICES_VERSION": "11.8.0"
+      }
+    }
+  }
+}
